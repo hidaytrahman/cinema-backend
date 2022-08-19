@@ -1,0 +1,27 @@
+@BASE_URL = http://localhost:8000/
+
+### Get lists
+GET {{BASE_URL}}casts
+
+
+### Create
+POST {{BASE_URL}}cast
+content-type: application/json
+
+{
+        "name": "Hidayt Rahman",
+        "avatar": "https://source.unsplash.com/random/300×300",
+        "country": "india",
+        "movies": [
+            {
+                "id" : "62f7704afb6049fa5da205ba"
+            }
+           
+        ]
+    }
+
+
+
+### Delete a movie
+
+DELETE {{BASE_URL}}cast/62f786ed9e0f24d71d8be525

@@ -1,0 +1,61 @@
+@BASE_URL = http://localhost:8000/
+
+### Get lists
+GET {{BASE_URL}}movies
+
+
+### Create
+POST {{BASE_URL}}movie
+content-type: application/json
+
+{
+        "title": "Cool Cool re",
+        "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+        "avatar": "https://m.media-amazon.com/images/M/MV5BZjMxOWQ2Y2EtOTJiNy00MWJlLTkzMjAtOGU3NmE1NzhjZTIzXkEyXkFqcGdeQXVyMzUwODg3NTU@._V1_FMjpg_UY337_.jpg",
+        "type": "movie",
+        "releaseDate": "14-October-1994",
+        "genres": [
+            "dramas"
+        ],
+        "rating": 8.8,
+        "stars": [
+            {
+                "name": "Brad Pitt",
+                "country": "USA",
+                "avatar": "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_UY317_CR16,0,214,317_AL__QL50.jpg",
+                "movies": [
+                    "Mystic River"
+                ]
+            },
+            {
+                "name": "Morgan Freeman",
+                "country": "USA",
+                "avatar": "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_UY317_CR16,0,214,317_AL__QL50.jpg",
+                "movies": [
+                    "Invictus",
+                    "Driving miss daisy"
+                ]
+            }
+        ],
+        "writers": [],
+        "director": {
+            "name": "Frank Darabont",
+            "country": "France",
+            "avatar": "https://m.media-amazon.com/images/M/MV5BNjk0MTkxNzQwOF5BMl5BanBnXkFtZTcwODM5OTMwNA@@._V1_UY317_CR20,0,214,317_AL__QL50.jpg",
+            "movies": [
+                "The walking Dead",
+                "The Mist",
+                "The Green Mile"
+            ]
+        },
+        "created": "2022-08-13T10:45:52.122Z",
+        "ott": [
+            "netflix"
+        ]
+    }
+
+
+
+### Delete a movie
+
+DELETE {{BASE_URL}}movie/62f786ed9e0f24d71d8be525
